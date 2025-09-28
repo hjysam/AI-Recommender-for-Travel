@@ -101,24 +101,6 @@ u2,G,2
 
 ---
 
-## Troubleshooting
-
-* **“No feasible itineraries”**
-
-  * Start with lenient constraints: `budget ≥ 250`, `hours ≥ 8`, `min activities = 2`.
-  * Pick a friendly **seed item** and click **Recommend** first.
-  * Ensure your `tags` actually include your “Prefer tags” words.
-
-* **CF shows zeros**
-
-  * You didn’t pick a **user**, or that user has no interactions.
-
-* **Python errors about `str | None`**
-
-  * Use Python **3.10+**, or replace `str | None` with `Optional[str]`.
-
----
-
 ## Future Works
 
 * Add **must-cover categories** (e.g., include at least one `food` item).
