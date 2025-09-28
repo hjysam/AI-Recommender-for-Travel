@@ -1,0 +1,31 @@
+item_id,title,tags,category,price,duration_hr,family_friendly,nightlife
+1,Island Snorkel Tour,"snorkel, reef, boat, island, family",activity,120,4,1,0
+2,Reef Snorkel Half-Day,"snorkel, reef, half-day, boat",activity,95,4,1,0
+3,Speedboat Party,"party, speedboat, music, nightlife",activity,80,3,0,1
+4,Kayak Mangroves,"kayak, nature, mangroves, wildlife",activity,70,3,1,0
+5,Island Hike,"hike, island, nature, family",activity,30,3,1,0
+6,Night Market Food Tour,"food, night, market, culture",activity,40,2,1,1
+7,Reef Scuba Intro,"scuba, reef, boat, training",activity,180,5,0,0
+8,Dolphin Watching Cruise,"boat, wildlife, family, sightseeing",activity,110,3,1,0
+9,Sunset Catamaran Sail,"boat, sunset, relax, sightseeing",activity,150,2,1,0
+10,Stand-Up Paddle Class,"SUP, paddle, training, water",activity,60,2,1,0
+11,Lagoon Snorkel Explorer,"snorkel, reef, boat, family",activity,115,5,1,0
+12,Coral Garden Drift Dive,"scuba, reef, drift, training",activity,212,5,1,1
+13,Seaside Sunset Picnic,"sunset, picnic, beach, family",activity,176,5,0,0
+14,Mountain View Hike,"hike, mountain, nature",activity,116,3,0,1
+15,Mangrove Eco Kayak,"kayak, mangroves, eco, wildlife",activity,214,4,1,0
+16,Island Cycling Loop,"cycling, island, scenic",activity,32,3,0,0
+17,Reef-Friendly Scuba Intro,"scuba, intro, reef, friendly",activity,181,2,0,0
+18,Coastal Lighthouse Tour,"lighthouse, coastal, sightseeing",activity,96,5,1,0
+19,Hidden Caves Expedition,"caves, adventure, explore",activity,71,2,1,0
+20,Star-Gazing Beach Camp,"camp, stargazing, beach, night",activity,149,3,0,0
+21,Local Cooking Class,"cooking, class, local",activity,56,2,0,1
+22,Farm-to-Table Dinner,"dinner, local, market",activity,51,4,1,1
+23,Historic Old Town Walk,"historic, walking, old-town",activity,122,2,0,0
+24,River SUP Adventure,"SUP, river, paddle",activity,88,3,0,0
+25,Glass-Bottom Boat Ride,"glass-bottom, boat, reef",activity,201,5,1,1
+26,Turtle Sanctuary Visit,"turtle, sanctuary, wildlife",activity,220,5,1,1
+27,Art & Craft Street Market,"art, craft, market",activity,118,3,1,1
+28,Rainforest Canopy Walk,"rainforest, canopy, walk",activity,51,5,0,1
+29,Harbor Night Cruise,"cruise, night, harbor",activity,84,4,1,1
+30,City Panorama Cable Car,"cable-car, city, panorama",activity,212,5,0,0
