@@ -41,18 +41,18 @@ Open the URL Streamlit prints (usually [http://localhost:8501](http://localhost:
 
 ---
 
-## How it works (short)
 
-* **Content-based (CB):** TF-IDF on `title + tags`, cosine similarity to seed item or query.
-* **Collaborative (CF):** build item×user matrix from `interactions.csv`, compute item–item cosine, score candidates by similarity to user’s history.
-* **Normalization:** per request, CB & CF scores are min–max scaled to **[0,1]**.
-* **Hybrid ranker:** `alpha * cb + beta * cf`, then **MMR** for diversity and a **guards hook** (place for policy filters).
-* **Itinerary composer:** beam-style expansion picks a small set of items that satisfies:
+## How it works
 
-  * `sum(price) ≤ max_budget`
-  * `sum(duration_hr) ≤ max_hours`
-  * optional flags: `family_friendly`, `avoid_nightlife`
-  * soft preferences via `prefer_tags`, plus a small diversity penalty
+- **Content-based (CB):** TF-IDF on `title + tags`, cosine similarity to the seed item or query.
+- **Collaborative (CF):** build an item×user matrix from `interactions.csv`, compute item–item cosine, and score candidates by similarity to the user’s history (if `user_id` provided).
+- **Normalization:** per request, CB & CF scores are min–max scaled to **[0,1]**.
+- **Hybrid ranker:** `alpha * cb + beta * cf`, then **MMR** (Maximal Marginal Relevance) for diversity—iteratively picks items balancing relevance and novelty (tag-Jaccard for redundancy).
+- **Itinerary Composer:** a deterministic planner that selects a small set of items satisfying:
+  - `sum(price) ≤ max_budget`
+  - `sum(duration_hr) ≤ max_hours`
+  - optional flags: `family_friendly`, `avoid_nightlife`
+  - soft preferences via `prefer_tags`, plus a small diversity penalty
 
 ---
 
@@ -62,7 +62,7 @@ Open the URL Streamlit prints (usually [http://localhost:8501](http://localhost:
 
 * **User (optional):** choose a user to enable CF.
 * **Seed item (optional)** or **Query:** drives CB.
-* **Sliders:** `alpha` (content weight), `beta` (collab weight), `Top-K`.
+* **Sliders:** `alpha` (content weight), `beta` (collabrative weight), `Top-K`.
 * Click **Recommend** to see a table with `item_id`, `title`, `tags`, `cb_score`, `cf_score`.
 
 ### 2) Persona Itineraries
@@ -97,7 +97,7 @@ u2,G,2
 ...
 ```
 
-* `weight` = strength of implicit feedback (e.g., clicks=1, wishlist=2, booking=5).
+* `weight` where: viewing=1, clicking=2, booking=3.
 
 ---
 
